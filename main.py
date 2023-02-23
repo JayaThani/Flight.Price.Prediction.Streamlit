@@ -36,7 +36,7 @@ if predict_btn:
         
         #saving output to a csv file
         df_predictions=pd.DataFrame(predictions,columns=["Predicted Price"])
-        df_final=pd.concat([final_dataset,df_predictions],axis=1)
+        df_final=pd.concat([df,df_predictions],axis=1)
         csv=df_final.to_csv(index=False).encode("utf-8")
         
 
